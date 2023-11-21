@@ -1,0 +1,128 @@
+{
+    "destinations": [
+        {
+            "name": "dms-integration-api-dest",
+            "url": "https://api-sdm-di.cfapps.eu10.hana.ondemand.com",
+            "forwardAuthToken": true
+        },
+        {
+            "name": "ui5",
+            "url": "https://ui5.sap.com",
+            "forwardAuthToken": true
+        }
+    ],
+    "VCAP_SERVICES": {
+        "xsuaa": [
+            {
+                "label": "xsuaa",
+                "provider": null,
+                "plan": "application",
+                "name": "dms-integration-xsuaa-service",
+                "tags": [
+                    "xsuaa"
+                ],
+                "instance_guid": "717bf26f-ee37-4bd4-84d3-41e61c44a3a2",
+                "instance_name": "dms-integration-xsuaa-service",
+                "binding_guid": "409d8288-b61b-4f9b-a240-0521bb3a2641",
+                "binding_name": null,
+                "credentials": {
+                    "tenantmode": "dedicated",
+                    "sburl": "https://internal-xsuaa.authentication.eu10.hana.ondemand.com",
+                    "subaccountid": "99167f13-3031-4c2b-a534-4b14fee5bc5f",
+                    "credential-type": "instance-secret",
+                    "clientid": "sb-dms-integration!t7224",
+                    "xsappname": "dms-integration!t7224",
+                    "clientsecret": "g7QCgYKCJylYAVAcWNMvJqZ6Bug=",
+                    "url": "https://itgdev.authentication.eu10.hana.ondemand.com",
+                    "uaadomain": "authentication.eu10.hana.ondemand.com",
+                    "verificationkey": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAwThn6OO9kj0bchkOGkqY\nBnV1dQ3zU/xtj7Kj7nDd8nyRMcEWCtVzrzjzhiisRhlrzlRIEY82wRAZNGKMnw7c\nvCwNixcfcDJnjzgr2pJ+5/yDZUc0IXXyIWPZD+XdL+0EogC3d4+fqyvg/BF/F0t2\nhKHWr/UTXE6zrGhBKaL0d8rKfYd6olGWigFd+3+24CKI14zWVxUBtC+P9Fhngc9D\nRzkXqhxOK/EKn0HzSgotf5duq6Tmk9DCNM4sLW4+ERc6xzrgbeEexakabvax/Az9\nWZ4qhwgw+fwIhKIC7WLwCEJaRsW4m7NKkv+eJR2LKYesuQ9SVAJ3EXV86RwdnH4u\nAv7lQHsKURPVAQBlranSqyQu0EXs2N9OlWTxe+FyNkIvyZvoLrZl/CdlYc8AKxRm\n5rn2/88nkrYQ0XZSrnICM5FRWgVF2hn5KfZGwtBN85/D4Yck6B3ocMfyX7e4URUm\n9lRPQFUJGTXaZnEIge0R159HUwhTN1HvyXrs6uT1ZZmW+c3p47dw1+LmUf/hIf8z\nd+uvHQjIeHEJqxjqfyA8yqAFKRHKVFrwnwdMHIsRap2EKBhHMfeVf0P2th5C9Mgg\nYoGCvdIaIUgMBX3TtCdvGrcWML7hnyS2zkrlA8SoKJnRcRF2KxWKs355FhpHpzqy\nZflO5l98+O8wOsFjGpL9d0ECAwEAAQ==\n-----END PUBLIC KEY-----",
+                    "apiurl": "https://api.authentication.eu10.hana.ondemand.com",
+                    "identityzone": "itgdev",
+                    "identityzoneid": "99167f13-3031-4c2b-a534-4b14fee5bc5f",
+                    "tenantid": "99167f13-3031-4c2b-a534-4b14fee5bc5f",
+                    "zoneid": "99167f13-3031-4c2b-a534-4b14fee5bc5f"
+                },
+                "syslog_drain_url": null,
+                "volume_mounts": []
+            }
+        ],
+        "destination": [
+            {
+                "label": "destination",
+                "provider": null,
+                "plan": "lite",
+                "name": "dms-integration-destination-service",
+                "tags": [
+                    "destination",
+                    "conn",
+                    "connsvc"
+                ],
+                "instance_guid": "c9ea808e-68fc-41c4-adfb-d17727b8410c",
+                "instance_name": "dms-integration-destination-service",
+                "binding_guid": "ecbd25c8-dc8d-4e02-9e64-8c789d4c4ec5",
+                "binding_name": null,
+                "credentials": {
+                    "tenantmode": "dedicated",
+                    "clientid": "sb-clonec9ea808e68fc41c4adfbd17727b8410c!b7224|destination-xsappname!b404",
+                    "credential-type": "binding-secret",
+                    "xsappname": "clonec9ea808e68fc41c4adfbd17727b8410c!b7224|destination-xsappname!b404",
+                    "clientsecret": "ecbd25c8-dc8d-4e02-9e64-8c789d4c4ec5$RTGBy-vtd8bjFm1bJVANwDS_yy3Vb4Tc_rEB51lkR3c=",
+                    "uri": "https://destination-configuration.cfapps.eu10.hana.ondemand.com",
+                    "url": "https://itgdev.authentication.eu10.hana.ondemand.com",
+                    "uaadomain": "authentication.eu10.hana.ondemand.com",
+                    "instanceid": "c9ea808e-68fc-41c4-adfb-d17727b8410c",
+                    "verificationkey": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAwThn6OO9kj0bchkOGkqY\nBnV1dQ3zU/xtj7Kj7nDd8nyRMcEWCtVzrzjzhiisRhlrzlRIEY82wRAZNGKMnw7c\nvCwNixcfcDJnjzgr2pJ+5/yDZUc0IXXyIWPZD+XdL+0EogC3d4+fqyvg/BF/F0t2\nhKHWr/UTXE6zrGhBKaL0d8rKfYd6olGWigFd+3+24CKI14zWVxUBtC+P9Fhngc9D\nRzkXqhxOK/EKn0HzSgotf5duq6Tmk9DCNM4sLW4+ERc6xzrgbeEexakabvax/Az9\nWZ4qhwgw+fwIhKIC7WLwCEJaRsW4m7NKkv+eJR2LKYesuQ9SVAJ3EXV86RwdnH4u\nAv7lQHsKURPVAQBlranSqyQu0EXs2N9OlWTxe+FyNkIvyZvoLrZl/CdlYc8AKxRm\n5rn2/88nkrYQ0XZSrnICM5FRWgVF2hn5KfZGwtBN85/D4Yck6B3ocMfyX7e4URUm\n9lRPQFUJGTXaZnEIge0R159HUwhTN1HvyXrs6uT1ZZmW+c3p47dw1+LmUf/hIf8z\nd+uvHQjIeHEJqxjqfyA8yqAFKRHKVFrwnwdMHIsRap2EKBhHMfeVf0P2th5C9Mgg\nYoGCvdIaIUgMBX3TtCdvGrcWML7hnyS2zkrlA8SoKJnRcRF2KxWKs355FhpHpzqy\nZflO5l98+O8wOsFjGpL9d0ECAwEAAQ==\n-----END PUBLIC KEY-----",
+                    "identityzone": "itgdev",
+                    "tenantid": "99167f13-3031-4c2b-a534-4b14fee5bc5f"
+                },
+                "syslog_drain_url": null,
+                "volume_mounts": []
+            }
+        ],
+        "html5-apps-repo": [
+            {
+                "label": "html5-apps-repo",
+                "provider": null,
+                "plan": "app-runtime",
+                "name": "dms-integration_html_repo_runtime",
+                "tags": [
+                    "html5appsrepo",
+                    "html5-apps-repo-rt",
+                    "html5-apps-rt",
+                    "html5-apps-repo-dt",
+                    "html5-apps-dt"
+                ],
+                "instance_guid": "1dbdceb9-40c2-431f-88e2-442551c9e160",
+                "instance_name": "dms-integration_html_repo_runtime",
+                "binding_guid": "83e6d734-4438-47ec-ad74-30e09ad207bc",
+                "binding_name": null,
+                "credentials": {
+                    "vendor": "SAP",
+                    "uri": "https://html5-apps-repo-rt.cfapps.eu10.hana.ondemand.com",
+                    "uaa": {
+                        "tenantmode": "dedicated",
+                        "sburl": "https://internal-xsuaa.authentication.eu10.hana.ondemand.com",
+                        "subaccountid": "99167f13-3031-4c2b-a534-4b14fee5bc5f",
+                        "credential-type": "binding-secret",
+                        "clientid": "sb-1dbdceb9-40c2-431f-88e2-442551c9e160!b7224|html5-apps-repo-uaa!b1685",
+                        "xsappname": "1dbdceb9-40c2-431f-88e2-442551c9e160!b7224|html5-apps-repo-uaa!b1685",
+                        "clientsecret": "83e6d734-4438-47ec-ad74-30e09ad207bc$1xggjkSfhdhgA1o71WvUBeN8jtXetPGg2F4HeA50Cfs=",
+                        "url": "https://itgdev.authentication.eu10.hana.ondemand.com",
+                        "uaadomain": "authentication.eu10.hana.ondemand.com",
+                        "verificationkey": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAwThn6OO9kj0bchkOGkqY\nBnV1dQ3zU/xtj7Kj7nDd8nyRMcEWCtVzrzjzhiisRhlrzlRIEY82wRAZNGKMnw7c\nvCwNixcfcDJnjzgr2pJ+5/yDZUc0IXXyIWPZD+XdL+0EogC3d4+fqyvg/BF/F0t2\nhKHWr/UTXE6zrGhBKaL0d8rKfYd6olGWigFd+3+24CKI14zWVxUBtC+P9Fhngc9D\nRzkXqhxOK/EKn0HzSgotf5duq6Tmk9DCNM4sLW4+ERc6xzrgbeEexakabvax/Az9\nWZ4qhwgw+fwIhKIC7WLwCEJaRsW4m7NKkv+eJR2LKYesuQ9SVAJ3EXV86RwdnH4u\nAv7lQHsKURPVAQBlranSqyQu0EXs2N9OlWTxe+FyNkIvyZvoLrZl/CdlYc8AKxRm\n5rn2/88nkrYQ0XZSrnICM5FRWgVF2hn5KfZGwtBN85/D4Yck6B3ocMfyX7e4URUm\n9lRPQFUJGTXaZnEIge0R159HUwhTN1HvyXrs6uT1ZZmW+c3p47dw1+LmUf/hIf8z\nd+uvHQjIeHEJqxjqfyA8yqAFKRHKVFrwnwdMHIsRap2EKBhHMfeVf0P2th5C9Mgg\nYoGCvdIaIUgMBX3TtCdvGrcWML7hnyS2zkrlA8SoKJnRcRF2KxWKs355FhpHpzqy\nZflO5l98+O8wOsFjGpL9d0ECAwEAAQ==\n-----END PUBLIC KEY-----",
+                        "apiurl": "https://api.authentication.eu10.hana.ondemand.com",
+                        "identityzone": "itgdev",
+                        "identityzoneid": "99167f13-3031-4c2b-a534-4b14fee5bc5f",
+                        "tenantid": "99167f13-3031-4c2b-a534-4b14fee5bc5f",
+                        "zoneid": "99167f13-3031-4c2b-a534-4b14fee5bc5f"
+                    },
+                    "grant_type": "client_credentials",
+                    "sap.cloud.service": "html5-apps-repo-rt",
+                    "saasregistryenabled": true
+                },
+                "syslog_drain_url": null,
+                "volume_mounts": []
+            }
+        ]
+    }
+}

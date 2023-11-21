@@ -1,0 +1,132 @@
+{
+  "_version": "1.58.0",
+  "sap.app": {
+    "id": "com.ntt.dmsintegrationui",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.11.4",
+      "toolsId": "9167b876-de9c-4910-9437-368c014663f3"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "dependencies": {
+      "minUI5Version": "1.120.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "componentUsages": {
+      "documentTable": {
+        "name": "com.sap.ecm.reuse.documentTable",
+        "settings": {
+          "destinationPath": "/comsapecmreuse.comsapecmreusedocumentTable/api",
+          "repositoryId": "CLASS_REPO",
+          "objectId": "7188d07000b57f589e6d2156"
+          }
+        }
+      },
+     "resourceRoots": {
+       "com.sap.ecm.reuse.documentTable": "./../comsapecmreuse.comsapecmreusedocumentTable/"
+     },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.ntt.dmsintegrationui.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "com.ntt.dmsintegrationui.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RouteHomepage",
+          "pattern": "",
+          "target": [
+            "TargetHomepage"
+          ]
+        },
+        {
+          "name": "RouteRepository",
+          "pattern": "repository/{repositoryId}/{rootFolderId}",
+          "target": [
+            "TargetRepository"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetHomepage": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Homepage",
+          "viewName": "Homepage"
+        },
+        "TargetRepository": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Repository",
+          "viewName": "Repository"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "com.ntt.dmsintegrationui.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

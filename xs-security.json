@@ -1,0 +1,13 @@
+{
+  "xsappname": "dms-integration",
+  "tenant-mode": "dedicated",
+  "description": "DMS Integration Option UI",
+  "scopes": [],
+  "role-templates": [],
+  "oauth2-configuration": {
+    "redirect-uris": [
+      "https://itgdev-abapcloud-dms-integration-app.cfapps.eu10.hana.ondemand.com/**",
+      "https://*.eu10.applicationstudio.cloud.sap/**"
+    ]
+  }
+}

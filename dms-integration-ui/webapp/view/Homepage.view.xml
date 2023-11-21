@@ -1,0 +1,56 @@
+<mvc:View controllerName="com.ntt.dmsintegrationui.controller.Homepage"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:form="sap.ui.layout.form">
+    <Page id="Homepage"
+        showHeader="false">
+        <content>
+            <f:ShellBar title="{i18n>title}"
+                secondTitle="{i18n>selectRepository}"
+                homeIcon="./img/app_logo.png">
+                <f:profile>
+                    <Avatar initials="NT"/>
+                </f:profile>
+            </f:ShellBar>
+            <FlexBox justifyContent="Center"
+                alignItems="Center">
+                <VBox width="95%">
+                    <form:SimpleForm id="sfRepository"
+                        editable="true"
+                        layout="ResponsiveGridLayout"
+                        title="{i18n>repositorySelection}"
+                        labelSpanXL="3"
+                        labelSpanL="3"
+                        labelSpanM="3"
+                        labelSpanS="12"
+                        adjustLabelSpan="false"
+                        emptySpanXL="4"
+                        emptySpanL="4"
+                        emptySpanM="4"
+                        emptySpanS="0"
+                        columnsXL="1"
+                        columnsL="1"
+                        columnsM="1"
+                        singleContainerFullSize="false">
+                        <form:content>
+                            <Label text="{i18n>repository}"/>
+                            <Input id="inpRepository"
+                                valueHelpRequest="onValueHelpRequested"
+                                showValueHelp="true">
+                            </Input>
+                            <Label text="{i18n>repositoryName}"/>
+                            <Text id="txtRepositoryName"/>
+                            <Label text="{i18n>rootFolderId}"/>
+                            <Text id="txtRootFolderId"/>
+                            <Label/>
+                            <Button text="{i18n>continue}"
+                                press="onNavToRepository"/>
+                        </form:content>
+                    </form:SimpleForm>
+                </VBox>
+            </FlexBox>
+        </content>
+    </Page>
+</mvc:View>

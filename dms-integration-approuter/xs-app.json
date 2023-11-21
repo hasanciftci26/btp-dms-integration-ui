@@ -1,0 +1,11 @@
+{
+  "authenticationMethod": "route",
+  "routes": [
+    {
+      "source": "/browser",
+      "destination": "dms-integration-api-dest",
+      "csrfProtection": true
+    }
+  ],
+  "welcomeFile": "/comnttdmsintegrationui"
+}

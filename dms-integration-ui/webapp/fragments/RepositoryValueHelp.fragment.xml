@@ -1,0 +1,34 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <TableSelectDialog title="{i18n>repositories}"
+        search="onSearchValueHelp"
+        confirm="onValueSelected"
+        contentWidth="50rem"
+        showClearButton="true"
+        items="{repositoryModel>/}">
+        <columns>
+            <Column>
+                <header>
+                    <Text text="{i18n>repositoryId}" />
+                </header>
+            </Column>
+            <Column>
+                <header>
+                    <Text text="{i18n>repositoryName}" />
+                </header>
+            </Column>
+            <Column>
+                <header>
+                    <Text text="{i18n>rootFolderId}" />
+                </header>
+            </Column>
+        </columns>
+        <ColumnListItem>
+            <cells>
+                <Text text="{repositoryModel>repositoryId}" />
+                <Text text="{repositoryModel>repositoryName}" />
+                <Text text="{repositoryModel>rootFolderId}" />
+            </cells>
+        </ColumnListItem>
+    </TableSelectDialog>
+</core:FragmentDefinition>
